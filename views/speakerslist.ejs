@@ -1,0 +1,26 @@
+<article>
+  <div class="container">
+      <div class="rows">
+         <% speakers.forEach(function(item){ %>	
+				  <div class="<% if(pageID == 'home'){ %>
+				  	col-xs-4
+				  <% }else{ %>
+				  	col-xs-8
+				  <% } %>">
+                      <h5><%= item.title %></h5>
+						<p><a href='<%= item.shortname %>'></a><%= item.name %></p>
+					</dt>
+					<dd><img src="/img/<%= item.shortname %>_tn.jpg"/>
+                    <% if(pageID!='home'){ %>
+                       <p><%= item.summary %></p>
+                    <% } %>
+			    	
+
+				  </div>
+						
+			<% }) %>
+      </div> 
+  </div>
+
+</article>
+
